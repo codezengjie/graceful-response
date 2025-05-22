@@ -19,6 +19,10 @@ public class DefaultResponseImplStyle0 implements Response {
     private ResponseStatus status;
     
     private Object payload = Collections.emptyMap();
+    
+    private Long timestamp = System.currentTimeMillis();
+    
+    private String path;
 
     public DefaultResponseImplStyle0() {
     }
@@ -45,5 +49,21 @@ public class DefaultResponseImplStyle0 implements Response {
     @Override
     public Object getPayload() {
         return payload;
+    }
+
+    public Long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Long timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
     }
 }

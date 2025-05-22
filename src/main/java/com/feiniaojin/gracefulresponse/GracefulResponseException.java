@@ -8,6 +8,8 @@ import com.feiniaojin.gracefulresponse.data.ResponseStatus;
  * @author qinyujie
  */
 public class GracefulResponseException extends RuntimeException {
+    
+    private static final long serialVersionUID = 1L;
 
     /**
      * 响应码
@@ -17,6 +19,10 @@ public class GracefulResponseException extends RuntimeException {
      * 提示信息
      */
     private String msg;
+    /**
+     * HTTP状态码
+     */
+    private int httpStatus = 500;
 
     public GracefulResponseException() {
     }
@@ -63,5 +69,21 @@ public class GracefulResponseException extends RuntimeException {
 
     public void setMsg(String msg) {
         this.msg = msg;
+    }
+    
+    /**
+     * Get HTTP status code
+     * @return HTTP status code
+     */
+    public int getHttpStatus() {
+        return httpStatus;
+    }
+
+    /**
+     * Set HTTP status code
+     * @param httpStatus HTTP status code
+     */
+    public void setHttpStatus(int httpStatus) {
+        this.httpStatus = httpStatus;
     }
 }
