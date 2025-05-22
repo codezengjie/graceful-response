@@ -108,6 +108,36 @@ public class GracefulResponseProperties {
 
     private Map<Class<?>, ExceptionAliasConfig> exceptionAliasConfigMap;
 
+    /**
+     * Enable response status caching
+     */
+    private boolean enableStatusCache = true;
+
+    /**
+     * Maximum cache size for response status
+     */
+    private int maxStatusCacheSize = 1000;
+
+    /**
+     * Enable async support
+     */
+    private boolean enableAsync = false;
+
+    /**
+     * Async thread pool core size
+     */
+    private int asyncCorePoolSize = 10;
+
+    /**
+     * Async thread pool max size
+     */
+    private int asyncMaxPoolSize = 20;
+
+    /**
+     * Async queue capacity
+     */
+    private int asyncQueueCapacity = 1000;
+
     public boolean isPrintExceptionInGlobalAdvice() {
         return printExceptionInGlobalAdvice;
     }
@@ -258,5 +288,53 @@ public class GracefulResponseProperties {
 
     public void setExceptionAliasConfigMap(Map<Class<?>, ExceptionAliasConfig> exceptionAliasConfigMap) {
         this.exceptionAliasConfigMap = exceptionAliasConfigMap;
+    }
+
+    public boolean isEnableStatusCache() {
+        return enableStatusCache;
+    }
+
+    public void setEnableStatusCache(boolean enableStatusCache) {
+        this.enableStatusCache = enableStatusCache;
+    }
+
+    public int getMaxStatusCacheSize() {
+        return maxStatusCacheSize;
+    }
+
+    public void setMaxStatusCacheSize(int maxStatusCacheSize) {
+        this.maxStatusCacheSize = maxStatusCacheSize;
+    }
+
+    public boolean isEnableAsync() {
+        return enableAsync;
+    }
+
+    public void setEnableAsync(boolean enableAsync) {
+        this.enableAsync = enableAsync;
+    }
+
+    public int getAsyncCorePoolSize() {
+        return asyncCorePoolSize;
+    }
+
+    public void setAsyncCorePoolSize(int asyncCorePoolSize) {
+        this.asyncCorePoolSize = asyncCorePoolSize;
+    }
+
+    public int getAsyncMaxPoolSize() {
+        return asyncMaxPoolSize;
+    }
+
+    public void setAsyncMaxPoolSize(int asyncMaxPoolSize) {
+        this.asyncMaxPoolSize = asyncMaxPoolSize;
+    }
+
+    public int getAsyncQueueCapacity() {
+        return asyncQueueCapacity;
+    }
+
+    public void setAsyncQueueCapacity(int asyncQueueCapacity) {
+        this.asyncQueueCapacity = asyncQueueCapacity;
     }
 }
