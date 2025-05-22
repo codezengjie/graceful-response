@@ -47,6 +47,10 @@ star!
 - 第三方组件适配：目前已完成 Swagger、springdoc、actuator、FastJson 等框架或者组件的适配
 - RESTful 支持：可以指定异常的 HTTP 状态码，并且支持统一指定
 - 错误码枚举：支持定义错误码枚举，避免创建过多的异常类
+- 响应状态缓存：通过缓存常用的响应状态对象提高性能
+- 异步支持：提供异步处理能力，可配置专用线程池
+- 性能监控：集成 Spring Boot Actuator 和 Micrometer，支持 Prometheus 监控
+- 响应元数据：自动添加时间戳和请求路径等元数据到响应中
 
 更多功能，请到[文档中心](https://doc.feiniaojin.com/graceful-response/home.html)进行了解。
 
@@ -270,7 +274,7 @@ https://doc.feiniaojin.com/graceful-response/home.html
 
 # 6. 交流和反馈
 
-欢迎通过以下二维码联系作者、并加入 Graceful Response 用户交流群，申请好友时请备注“GR”。
+欢迎通过以下二维码联系作者、并加入 Graceful Response 用户交流群，申请好友时请备注"GR"。
 
 <div><img src="./assets/qr.jpg" style="width: 50%"/></div>
 
